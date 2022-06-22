@@ -195,6 +195,11 @@ letter-spacing: 0.02em;
 align-items: center;
 
 }
+.auth.first:hover,
+.auth.first:focus
+{ color: var(--background-main-button);
+
+}
 .auth:last-child{
     margin-right: 0;
 }
@@ -242,12 +247,15 @@ margin-bottom: 0;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: url(../images/Img-2.jpg); 
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    background-image: url(../images/Img-2.jpg), -webkit-radial-gradient(right,rgba(47, 48, 58, 0.4) 40%, rgba(47, 48, 58, 0.4));   
 box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    lin
+
 
     
 }
