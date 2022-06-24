@@ -250,8 +250,8 @@ margin-bottom: 0;
     max-width: 1600px;
     height: 600px;
     margin: 0 auto;
-    background-image: url(../images/Img-2.jpg), -webkit-radial-gradient(right,rgba(47, 48, 58, 0.4) 40%, rgba(47, 48, 58, 0.4));   
-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(47, 48, 58, 0.4)),
+    url(../images/Img-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -337,13 +337,16 @@ color: var(--secondary-hesd-color);
 
 }
 .feature-picture{
+    display: flex;
     width: 270px;
     height: 120px;
     background: #F5F4FA;
-    text-align: center;
-   padding: 25px 100px;
-   margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+   
 }
+
 
 /*  Специализация */
 .specialisation{
@@ -448,57 +451,48 @@ background-color: var(--team-background-color);
     letter-spacing: 0.03em;
 }
 .social-link{
+    display: flex;
     padding-left: 0;
+    margin: 0 auto;
+    padding: 0;
     margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-text-color);   
+    list-style-type: none;
 
 }
-.social-link .link{
-    display: inline-block;
+
+.social-link.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
-    border: 2px;
-    border-radius: 50%;
-    margin-right: 10px;
-    margin-bottom: 30px;
-    padding: 12px 12px;
-    align-items: center;
-    fill: var(--primary-text-color);
+    border-radius: 50px;
     
+    list-style-type: none;
+    fill: var(--primary-text-color)   
 
 }
-.social-link .link:hover{
+.social-icon{
+    fill: currentColor;
+} 
+
+.social-link.link:hover,
+.social-link.link:focus {
     background-color: var(--acent-color);
+    color: var(--head-line-color);
 }
 
-.icon-instagram{
+.social-icon.insta{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    fill: #AFB1B8;
+   
 
 }
-.icon-instagram:hover{
-    fill: var(--head-text-color);
-}
-.icon-twitter{
-    align-items: center;
-    fill: #AFB1B8;
-}
-.icon-twitter:hover {
-    fill: var(--head-text-color);
-}
-.icon-facebook{
-    align-items: center;
-    fill: #AFB1B8;
-}
-.icon-facebook:hover {
-    fill: var(--head-text-color);
-}
-.icon-in{
-    fill: #AFB1B8;
-    align-items: center;
-}
-.icon-in:hover {
-    fill: var(--head-text-color);
-}
+
 .social:last-child{
     margin-right: 0%;
 }
@@ -521,51 +515,38 @@ background-color: var(--team-background-color);
     margin-bottom: 50px;
 }
 .client.list .link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     width: 170px;
     height: 92px;
-    border: 2px solid #AFB1B8;
+    border: 1px solid #AFB1B8;
     border-radius: 4px;
     margin-right: 30px;
 }
 .client.list .link:last-child{
     margin-right: 0;
 }
-.client.list .link.first{
-    padding: 23px 64px;
+.client.list .link:hover,
+.client.list .link:focus{
+    border-color: var(--acent-color);
 }
-.client.list .link.second {
-    padding-top: 19px;
-    padding-left: 65px;
-    padding-right: 65px;
-    padding-bottom: 21px;
-}
-.client.list .link.third{
-    padding-top: 25px;
-    padding-left: 62px;
-    padding-right: 62px;
-    padding-bottom: 26px;
-}
-.client.list .link.fourth {
-    padding: 16px 32px;
-}
-.client.list .link.five {
-    padding-top: 23px;
-    padding-left: 54px;
-    padding-right: 54px;
-    padding-bottom: 24px;
-}
-.client.list .link.six{
-padding: 16px 32px;
-}
+
+
 /* Footer */
 .footer {
-    display: flex;
+  
 padding-top: 60px;
 padding-bottom: 60px;
 justify-content: center;
 
-margin-right: 0;
+
 background-color: var(--bacground-hero-color);
+}
+.conteiner.last{
+    display: flex;
+    align-items: baseline;
 }
 
 /* Logo */
@@ -647,11 +628,13 @@ background-color: var(--bacground-hero-color);
 .telephone:hover,
 .telephone:focus {
     color: var(--acent-color);
+    
 }
-.footer.title{
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
+.information{
+    margin-right: 70px;
+}
+.footer .title{
+   
 
     font-family: 'Roboto';
     font-style: normal;
@@ -662,33 +645,25 @@ background-color: var(--bacground-hero-color);
     text-transform: uppercase;
     color: var(--head-text-color);
 }
-.information{
-    display: inline-block;
 
-}
-.footer.social{
-    display: inline-block;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-left: 70px;
-    margin-top: 0;
+.footer .social-link.link {
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--head-text-color);
     
 }
-.footer.link{
-    border: 2px solid tomato;
-    background-color: var(--head-text-color);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-   opacity: 0.2;
-   fill: #FFFFFF;
-    
-    
+.footer .social-link.link:hover,
+.footer .social-link.link:focus{
+    background-color: var(--acent-color);
 }
-.footer.link .icon{
-    fill: #FFFFFF;
-    opacity: 1;
-   
 
-}
+
+.social-icon.insta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
 /* Portfolio */
 
 .portfolio{
@@ -747,7 +722,11 @@ margin-right: 8px;
  
 
     }
-    
+
+.portfolio-item:hover,
+.portfolio-item:focus{
+
+}
     .portfolio-item:nth-child(3n) {
         margin-right: 0;
     }
